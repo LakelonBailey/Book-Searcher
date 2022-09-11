@@ -28,8 +28,8 @@ const LoginForm = () => {
     }
 
     try {
-      const response = await loginUser({
-        variables: userFormData
+      const { data } = await loginUser({
+        variables: {...userFormData}
       });
 
       if (!response.ok) {
